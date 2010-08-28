@@ -1,0 +1,12 @@
+lib/sieve/sieve.bundle
+
+tmp/*
+*.DS_Store
+coverage/*
+*.swp
+*.swo
+rerun.txt
+pkg/*
+*.gem
+
+!.keep
