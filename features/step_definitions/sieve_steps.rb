@@ -23,7 +23,7 @@ When /^I load all the primes from "([^"]*)"$/ do |path|
 end
 
 When /^I run a sieve on the last number$/ do
-  @result = @primes.last.sieve
+  When %{I run a sieve on #{@primes.last}}
 end
 
 Then /^I should have all primes from "([^"]*)"$/ do |path|
