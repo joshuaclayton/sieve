@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name = %q{sieve}
   s.summary = %q{Sieve of Eratosthenes}
   s.homepage = %q{http://github.com/joshuaclayton/sieve}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
   s.authors = ["Josh Clayton"]
   s.date = %q{2010-08-28}
   s.email = %q{joshua.clayton@gmail.com}
