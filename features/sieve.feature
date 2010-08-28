@@ -23,6 +23,10 @@ Feature: Sieve of Eratosthenes
       | 30     | 2,3,5,7,11,13,17,19,23,29                                                              |
       | 110    | 2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,101,103,107,109 |
 
+  Scenario: Allocating memory for the sieve raises an exception if it fails
+    When I run a sieve on 1000000000000000000
+    Then a NoMemoryError should be raised
+
   Scenario: Prime tables
     When I load all the primes from "features/support/primes.txt"
     And I run a sieve on the last number

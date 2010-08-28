@@ -1,5 +1,8 @@
 When /^I run a sieve on (\-?\d+)$/ do |number|
-  @result = number.to_i.sieve
+  begin
+    @result = number.to_i.sieve
+  rescue Exception => @sieve_exception
+  end
 end
 
 Then /^I should have the primes (.*)$/ do |primes|
@@ -25,6 +28,10 @@ end
 
 Then /^I should have all primes from "([^"]*)"$/ do |path|
   Then %{I should have the primes #{prime_file_process(path).join(",")}}
+end
+
+Then /^a NoMemoryError should be raised$/ do
+  @sieve_exception.should be_a(NoMemoryError)
 end
 
 module PrimeFileProcessor

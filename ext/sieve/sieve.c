@@ -14,7 +14,9 @@ static VALUE sieve(const VALUE self) {
   long number = rb_num2long(self) + 1,
      * numbers = malloc(number * sizeof(long));
 
-  if(numbers == NULL) { return Qnil; }
+  if(numbers == NULL) {
+    rb_raise(rb_eNoMemError, "Can't allocate enough memory.");
+  }
 
   long i;
   for(i = 0; i < number; i++) {
