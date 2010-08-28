@@ -16,10 +16,10 @@ Gem::Specification.new do |s|
     "README.markdown",
     "Rakefile",
     "benchmark.rb",
-    "lib/sieve.rb",
     "ext/sieve/extconf.rb",
     "ext/sieve/sieve.c",
     "ext/sieve/sieve.h",
+    "lib/sieve.rb"
   ]
   s.test_files = [
     "cucumber.yml",
@@ -29,3 +29,4 @@ Gem::Specification.new do |s|
     "features/support/primes.txt"
   ]
 end
+
