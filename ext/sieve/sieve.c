@@ -10,6 +10,7 @@ void Init_sieve() {
 }
 
 static VALUE sieve(const VALUE self) {
+  if(rb_num2long(self) < 0) { return Qnil; }
   long number = rb_num2long(self) + 1,
      * numbers = malloc(number * sizeof(long));
 

@@ -8,6 +8,11 @@ Feature: Sieve of Eratosthenes
     Then I should have the primes <primes>
     Examples:
       | number | primes                                                                                 |
+      | -12345 | nil                                                                                    |
+      | -5     | nil                                                                                    |
+      | -1     | nil                                                                                    |
+      | 0      |                                                                                        |
+      | 1      |                                                                                        |
       | 2      | 2                                                                                      |
       | 3      | 2,3                                                                                    |
       | 4      | 2,3                                                                                    |

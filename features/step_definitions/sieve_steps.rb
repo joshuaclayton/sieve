@@ -1,10 +1,17 @@
-When /^I run a sieve on (\d+)$/ do |number|
+When /^I run a sieve on (\-?\d+)$/ do |number|
   @result = number.to_i.sieve
 end
 
 Then /^I should have the primes (.*)$/ do |primes|
-  @primes = primes.split(",").map(&:strip).map(&:to_i)
-  @result.should == @primes
+  case primes
+  when "nil"
+    @result.should be_nil
+  when ""
+    @result.should be_empty
+  else
+    @primes = primes.split(",").map(&:strip).map(&:to_i)
+    @result.should == @primes
+  end
 end
 
 When /^I load all the primes from "([^"]*)"$/ do |path|
