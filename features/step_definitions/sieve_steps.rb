@@ -1,4 +1,4 @@
-When /^I run a sieve on (\-?\d+)$/ do |number|
+When /^I calculate the sieve for (\-?\d+)$/ do |number|
   begin
     @result = number.to_i.sieve
   rescue Exception => @sieve_exception
@@ -22,8 +22,8 @@ When /^I load all the primes from "([^"]*)"$/ do |path|
   @primes.should_not be_empty
 end
 
-When /^I run a sieve on the last number$/ do
-  When %{I run a sieve on #{@primes.last}}
+When /^I calculate the sieve for the last number$/ do
+  When %{I calculate the sieve for #{@primes.last}}
 end
 
 Then /^I should have all primes from "([^"]*)"$/ do |path|
