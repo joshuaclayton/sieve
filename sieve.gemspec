@@ -15,7 +15,6 @@ Gem::Specification.new do |s|
     "MIT-LICENSE",
     "README.markdown",
     "Rakefile",
-    "benchmark.rb",
     "ext/sieve/extconf.rb",
     "ext/sieve/sieve.c",
     "ext/sieve/sieve.h",
