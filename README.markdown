@@ -13,7 +13,7 @@ Install with Rubygems:
 A method is added to the Numeric class.
 
     5.sieve  # [2, 3, 5]
-    20.sieve # [2, 3, 5, 7, 11, 13, 17]
+    20.sieve # [2, 3, 5, 7, 11, 13, 17, 19]
 
 ## Benchmarks
 
