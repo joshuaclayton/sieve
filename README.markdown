@@ -46,20 +46,21 @@ ruby 1.8.6 (2010-02-05 patchlevel 399) [i686-darwin10.4.0]
 ruby 1.8.7 (2010-08-16 patchlevel 302) [i686-darwin10.4.0]
 
                         user     system      total        real
-    sieve method    72.230000   0.970000  73.200000 ( 73.462660)
-    Numeric#sieve    0.970000   0.360000   1.330000 (  1.334183)
+    sieve method    41.720000   0.730000  42.450000 ( 43.640117)
+    Numeric#sieve    0.960000   0.380000   1.340000 (  1.385924)
 
 ruby 1.8.7 (2010-04-19 patchlevel 253) [i686-darwin10.4.0], MBARI 0x6770, Ruby Enterprise Edition 2010.02
 
                         user     system      total        real
-    sieve method    86.790000   0.940000  87.730000 ( 87.804085)
-    Numeric#sieve    1.010000   0.380000   1.390000 (  1.393168)
+    sieve method    42.800000   0.910000  43.710000 ( 45.105879)
+    Numeric#sieve    1.090000   0.370000   1.460000 (  1.517832)
+
 
 ruby 1.9.2p0 (2010-08-18 revision 29036) [x86_64-darwin10.4.0]
 
                         user     system      total        real
-    sieve method    21.430000   0.480000  21.910000 ( 21.900469)
-    Numeric#sieve    0.890000   0.270000   1.160000 (  1.146750)
+    sieve method    22.800000   0.670000  23.470000 ( 24.132390)
+    Numeric#sieve    1.000000   0.380000   1.380000 (  1.422877)
 
 ## Author
 

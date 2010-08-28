@@ -28,7 +28,7 @@ task(:benchmark => [:clean, :compile]) do
     numbers.compact
   end
 
-  Benchmark.bm(15) do |benchmark|
+  Benchmark.bmbm(15) do |benchmark|
     range = (0..1000000)
     step = 10000
 
