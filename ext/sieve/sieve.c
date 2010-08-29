@@ -18,16 +18,15 @@ static VALUE sieve(const VALUE self) {
     rb_raise(rb_eNoMemError, "Can't allocate enough memory.");
   }
 
-  long i;
-  for(i = 0; i < number; i++) {
-    numbers[i] = i;
-  }
   numbers[0] = numbers[1] = -1;
+  long i;
+  for(i = 2; i < number; i++) { numbers[i] = i; }
 
   long current_square;
   for(i = 0; i < number; i++) {
+    if(numbers[i] == -1) { continue; }
+
     current_square = powl(i, 2);
-    if(numbers[i] == -1)        { continue; }
     if(current_square > number) { break; }
 
     long n;
@@ -38,9 +37,8 @@ static VALUE sieve(const VALUE self) {
 
   VALUE primes_array = rb_ary_new();
   for(i = 0; i < number; i++) {
-    if(numbers[i] != -1) {
-      rb_ary_push(primes_array, LONG2FIX(numbers[i]));
-    }
+    if(numbers[i] == -1) { continue; }
+    rb_ary_push(primes_array, LONG2FIX(numbers[i]));
   }
 
   free(numbers);
