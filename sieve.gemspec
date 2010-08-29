@@ -1,13 +1,17 @@
+$LOAD_PATH << File.join(File.dirname(__FILE__), "lib")
+require "sieve"
+
 Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
 
   s.name = %q{sieve}
   s.summary = %q{Sieve of Eratosthenes}
+  s.description = %q{Ruby C Extension for the Sieve of Eratosthenes}
   s.homepage = %q{http://github.com/joshuaclayton/sieve}
-  s.version = "0.0.2"
+  s.version = Sieve::VERSION
   s.authors = ["Josh Clayton"]
-  s.date = %q{2010-08-28}
+  s.date = %q{2010-08-29}
   s.email = %q{joshua.clayton@gmail.com}
   s.extensions = ["ext/sieve/extconf.rb"]
   s.files = [
