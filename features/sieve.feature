@@ -11,8 +11,8 @@ Feature: Sieve of Eratosthenes
       | -12345 | nil                                                                                    |
       | -5     | nil                                                                                    |
       | -1     | nil                                                                                    |
-      | 0      |                                                                                        |
-      | 1      |                                                                                        |
+      | 0      | nil                                                                                    |
+      | 1      | nil                                                                                    |
       | 2      | 2                                                                                      |
       | 3      | 2,3                                                                                    |
       | 4      | 2,3                                                                                    |
