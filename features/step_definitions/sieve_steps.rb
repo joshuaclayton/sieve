@@ -12,7 +12,7 @@ Then /^I should have the primes (.*)$/ do |primes|
   when ""
     @result.should be_empty
   else
-    @primes = primes.split(",").map(&:strip).map(&:to_i)
+    @primes = primes.split(",").map {|prime| prime.to_i }
     @result.should == @primes
   end
 end
@@ -36,7 +36,13 @@ end
 
 module PrimeFileProcessor
   def prime_file_process(path)
-    File.new(path).read.strip.split(/\s+/).map(&:to_i)
+    @processed_cache ||= {}
+
+    if @processed_cache[path]
+      @processed_cache[path]
+    else
+      @processed_cache[path] = File.new(path).read.strip.split(/\s+/).map {|prime| prime.to_i }
+    end
   end
 end
 
