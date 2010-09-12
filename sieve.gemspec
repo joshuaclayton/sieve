@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/joshuaclayton/sieve}
   s.version = Sieve::VERSION
   s.authors = ["Josh Clayton"]
-  s.date = %q{2010-08-29}
+  s.date = %q{2010-09-12}
   s.email = %q{joshua.clayton@gmail.com}
   s.extensions = ["ext/sieve/extconf.rb"]
   s.files = [
