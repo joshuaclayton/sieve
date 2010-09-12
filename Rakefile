@@ -10,15 +10,17 @@ Rake::ExtensionTask.new("sieve") do |extension|
   extension.lib_dir = "lib/sieve"
 end
 
+task :build => [:clean, :compile]
+
 require "cucumber/rake/task"
-Cucumber::Rake::Task.new(:cucumber => [:clean, :compile]) do |t|
+Cucumber::Rake::Task.new(:cucumber => :build) do |t|
   t.rcov = true
 end
 
 task :default => :cucumber
 
 desc "Benchmark C implementation against pure Ruby implementation of the Sieve"
-task(:benchmark => [:clean, :compile]) do
+task(:benchmark => :build) do
   def sieve(n)
     numbers = (0..n).map {|i| i }
     numbers[0] = numbers[1] = nil
