@@ -55,5 +55,9 @@ task(:benchmark => :build) do
     benchmark.report("10_000_000.sieve") do
       10_000_000.sieve
     end
+
+    benchmark.report("100_000_000.sieve") do
+      100_000_000.sieve
+    end
   end
 end
