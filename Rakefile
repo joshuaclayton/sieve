@@ -1,6 +1,8 @@
 require "rubygems"
 require "rake"
 require "benchmark"
+
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "lib"))
 require "sieve"
 
 require "rake/extensiontask"
