@@ -18,7 +18,8 @@ A method is added to the Numeric class.
 ## Benchmarks
 
 This benchmark loops through a handful of numbers 0 to 1 million in steps of
-100000 and runs a sieve on each number.
+100000 and runs a sieve on each number.  I also include benchmarks for running
+the sieve against 10 million.
 
 The sieve method itself looks like this:
 
@@ -39,28 +40,35 @@ The benchmarks were run on a 2.8GHz Intel Core 2 Duo MacBook Pro with 8 GB memor
 
 ruby 1.8.6 (2010-02-05 patchlevel 399) [i686-darwin10.4.0]
 
-                        user     system      total        real
-    sieve method    41.430000   0.600000  42.030000 ( 42.261872)
-    Numeric#sieve    1.010000   0.250000   1.260000 (  1.342326)
+                          user     system      total        real
+    sieve method      41.620000   0.860000  42.480000 ( 42.956830)
+    Numeric#sieve      0.360000   0.130000   0.490000 (  0.506452)
+    sieve 10_000_000   8.770000   0.110000   8.880000 (  9.019959)
+    10_000_000.sieve   0.330000   0.020000   0.350000 (  0.357979)
 
 ruby 1.8.7 (2010-08-16 patchlevel 302) [i686-darwin10.4.0]
 
-                        user     system      total        real
-    sieve method    41.720000   0.730000  42.450000 ( 43.640117)
-    Numeric#sieve    0.960000   0.380000   1.340000 (  1.385924)
+                          user     system      total        real
+    sieve method      41.180000   0.860000  42.040000 ( 42.246443)
+    Numeric#sieve      0.350000   0.130000   0.480000 (  0.479553)
+    sieve 10_000_000   8.960000   0.120000   9.080000 (  9.117586)
+    10_000_000.sieve   0.340000   0.020000   0.360000 (  0.359590)
 
 ruby 1.8.7 (2010-04-19 patchlevel 253) [i686-darwin10.4.0], MBARI 0x6770, Ruby Enterprise Edition 2010.02
 
-                        user     system      total        real
-    sieve method    42.800000   0.910000  43.710000 ( 45.105879)
-    Numeric#sieve    1.090000   0.370000   1.460000 (  1.517832)
-
+                          user     system      total        real
+    sieve method      42.410000   0.750000  43.160000 ( 43.190891)
+    Numeric#sieve      0.490000   0.110000   0.600000 (  0.607309)
+    sieve 10_000_000   9.040000   0.120000   9.160000 (  9.166911)
+    10_000_000.sieve   0.350000   0.020000   0.370000 (  0.371991)
 
 ruby 1.9.2p0 (2010-08-18 revision 29036) [x86_64-darwin10.4.0]
 
-                        user     system      total        real
-    sieve method    22.800000   0.670000  23.470000 ( 24.132390)
-    Numeric#sieve    1.000000   0.380000   1.380000 (  1.422877)
+                          user     system      total        real
+    sieve method      22.410000   0.800000  23.210000 ( 23.232721)
+    Numeric#sieve      0.380000   0.130000   0.510000 (  0.503788)
+    sieve 10_000_000   4.820000   0.130000   4.950000 (  4.938275)
+    10_000_000.sieve   0.330000   0.030000   0.360000 (  0.353741)
 
 ## Author
 
