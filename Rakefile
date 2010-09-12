@@ -34,7 +34,7 @@ task(:benchmark => :build) do
 
   Benchmark.bmbm(15) do |benchmark|
     range = (0..1000000)
-    step = 10000
+    step = 100000
 
     benchmark.report("sieve method") do
       range.step(step) do |i|
