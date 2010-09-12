@@ -47,5 +47,13 @@ task(:benchmark => :build) do
         i.sieve
       end
     end
+
+    benchmark.report("sieve 10_000_000") do
+      sieve 10_000_000
+    end
+
+    benchmark.report("10_000_000.sieve") do
+      10_000_000.sieve
+    end
   end
 end
