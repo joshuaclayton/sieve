@@ -2,9 +2,6 @@ require "rubygems"
 require "rake"
 require "benchmark"
 
-$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "lib"))
-require "sieve"
-
 require "rake/extensiontask"
 Rake::ExtensionTask.new("sieve") do |extension|
   extension.lib_dir = "lib/sieve"
@@ -21,6 +18,9 @@ task :default => :cucumber
 
 desc "Benchmark C implementation against pure Ruby implementation of the Sieve"
 task(:benchmark => :build) do
+  $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "lib"))
+  require "sieve"
+
   def sieve(n)
     numbers = (0..n).map {|i| i }
     numbers[0] = numbers[1] = nil
