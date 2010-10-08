@@ -32,16 +32,12 @@ static VALUE sieve(const VALUE self) {
     if(current_square > number) { break; }
 
     long n;
-    for(n = current_square; n < number; n += i) {
-      CLEARBIT(results, n);
-    }
+    for(n = current_square; n < number; n += i) { CLEARBIT(results, n); }
   }
 
   VALUE primes_array = rb_ary_new();
   for(i = 0; i < number; i++) {
-    if(BITSET(results, i)) {
-      rb_ary_push(primes_array, LONG2FIX(i));
-    }
+    if(BITSET(results, i)) { rb_ary_push(primes_array, LONG2FIX(i)); }
   }
 
   free(results);
