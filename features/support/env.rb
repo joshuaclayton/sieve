@@ -1,3 +1,2 @@
-$LOAD_PATH.unshift(File.dirname(__FILE__) + '/../../lib')
+Bundler.require
 require "sieve"
-require "spec/expectations"

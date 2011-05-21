@@ -1,5 +1,5 @@
-require "sieve/sieve"
-
 module Sieve
-  VERSION = "0.1.2"
+  autoload :Version, "sieve/version"
 end
+
+require "sieve/sieve"

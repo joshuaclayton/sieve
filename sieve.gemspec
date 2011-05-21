@@ -1,5 +1,8 @@
-$LOAD_PATH << File.join(File.dirname(__FILE__), "lib")
-require "sieve"
+# -*- encoding: utf-8 -*-
+lib = File.expand_path("../lib/", __FILE__)
+$:.unshift(lib) unless $:.include?(lib)
+
+require "sieve/version"
 
 Gem::Specification.new do |s|
   s.name             = %q{sieve}
@@ -17,5 +20,9 @@ Gem::Specification.new do |s|
   s.extensions = ["ext/sieve/extconf.rb"]
   s.files      = %x{git ls-files}.split("\n").reject {|file| file =~ /^(features|cucumber)/ }
   s.test_files = %x{git ls-files}.split("\n").select {|file| file =~ /^(features|cucumber)/ }
-end
 
+  s.add_dependency "rake-compiler",        "0.7.6"
+  s.add_development_dependency "rspec",    "2.5.0"
+  s.add_development_dependency "cucumber", "0.10.2"
+  s.add_development_dependency "rcov",     "0.9.9"
+end
