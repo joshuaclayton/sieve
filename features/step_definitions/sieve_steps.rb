@@ -7,8 +7,8 @@ end
 
 Then /^I should have the primes (.*)$/ do |primes|
   case primes
-  when "nil"
-    @result.should be_nil
+  when ""
+    @result.should == []
   else
     @primes = primes.split(",").map {|prime| prime.to_i }
     @result.should == @primes
