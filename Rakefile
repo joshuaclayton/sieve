@@ -20,7 +20,7 @@ task(:benchmark => :build) do
   require "sieve"
 
   def sieve(n)
-    numbers = (0..n).map {|i| i }
+    numbers = (0..n).to_a
     numbers[0] = numbers[1] = nil
     numbers.each do |num|
       next unless num
