@@ -21,8 +21,7 @@ Gem::Specification.new do |s|
   s.files      = %x{git ls-files}.split("\n").reject {|file| file =~ /^(features|cucumber)/ }
   s.test_files = %x{git ls-files}.split("\n").select {|file| file =~ /^(features|cucumber)/ }
 
-  s.add_dependency "rake-compiler",        "0.7.6"
-  s.add_development_dependency "rspec",    "2.5.0"
-  s.add_development_dependency "cucumber", "0.10.2"
-  s.add_development_dependency "rcov",     "0.9.9"
+  s.add_dependency "rake-compiler",        "0.7.9"
+  s.add_development_dependency "rspec",    "2.7.0"
+  s.add_development_dependency "cucumber", "1.1.0"
 end

@@ -10,9 +10,7 @@ end
 task :build => [:clean, :compile]
 
 require "cucumber/rake/task"
-Cucumber::Rake::Task.new(:cucumber => :build) do |t|
-  t.rcov = true
-end
+Cucumber::Rake::Task.new(:cucumber => :build)
 
 task :default => :cucumber
 
