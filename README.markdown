@@ -81,3 +81,7 @@ The benchmarks were run on a 2.8GHz Intel Core 2 Duo MacBook Pro with 8 GB memor
 ## Author
 
 Written by Josh Clayton
+
+## License
+
+See the LICENSE
