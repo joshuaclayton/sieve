@@ -13,9 +13,6 @@ Gem::Specification.new do |s|
   s.authors          = ["Josh Clayton"]
   s.email            = %q{joshua.clayton@gmail.com}
 
-  s.rubygems_version = %q{1.3.7}
-  s.date             = %q{2010-09-12}
-
   s.require_paths = ["lib"]
   s.extensions = ["ext/sieve/extconf.rb"]
   s.files      = %x{git ls-files}.split("\n").reject {|file| file =~ /^(features|cucumber)/ }
